@@ -19,6 +19,12 @@ public class StatsController {
 
     @GetMapping("/chart")
     public ResponseEntity<GraphDTO> getChartDetails(){
+
         return ResponseEntity.ok(statsService.graphChartData());
+    }
+
+    @GetMapping
+    public ResponseEntity<?> getStats(){
+        return ResponseEntity.ok(statsService.getStats());
     }
 }
